@@ -20,7 +20,6 @@ RUN /build/install-gosu.sh
 RUN /build/install-tini.sh
 
 COPY rootfs /
-COPY wordpress /
 ENV ALLOW_EMPTY_PASSWORD="no" \
     BITNAMI_APP_NAME="wordpress" \
     BITNAMI_IMAGE_VERSION="5.3.2-debian-10-r4" \
