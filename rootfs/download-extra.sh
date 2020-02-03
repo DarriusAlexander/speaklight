@@ -1,7 +1,4 @@
 #!/bin/bash
-curl https://storage.cloud.google.com/wp-speaklight/wp-content.zip?cloudshell=true&orgonly=true&supportedpurview=organizationId | grep -oP '"tag_name": "\K(.*)(?=")'
-unzip wp-content.zip -d /opt/bitnami/wordpress
-
-
-
-
+curl -LO https://github.com/DarriusAlexander/speaklight-content/archive/master.zip  | grep -oP '"tag_name": "\K(.*)(?=")'
+unzip master.zip -d /opt/bitnami/wordpress
+mv /opt/bitnami/wordpress/wp-content-master /opt/bitnami/wp-content
