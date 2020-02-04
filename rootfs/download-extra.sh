@@ -1,5 +1,4 @@
 #!/bin/bash
-rm -r /bitnami/wordpress/wp-content
 curl -LO https://github.com/DarriusAlexander/speaklight-content/archive/master.zip  | grep -oP '"tag_name": "\K(.*)(?=")'
 unzip master.zip -d /bitnami/wordpress
-mv /bitnami/wordpress/wp-content-master /bitnami/wordpress/wp-content
+mv /opt/bitnami/wordpress/wp-content-master /opt/bitnami/wordpress/wp-content
