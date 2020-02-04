@@ -15,7 +15,7 @@ RUN bitnami-pkg unpack mysql-client-10.3.22-0 --checksum 9529ac5187264223e385260
 RUN bitnami-pkg install libphp-7.3.14-0 --checksum b9d1872eeaf47fe678aaefd4d5925be1bbab64d67f808c14d849039a204faad8
 RUN bitnami-pkg unpack wordpress-5.3.2-0 --checksum bfd7c0705c367e72edf533b1dbfb217627c5d073f7be2efce91d49062c4ffa6a
 RUN apt-get update && apt-get upgrade && \
-    rm -r /var/lib/apt/lists /var/cache/apt/archives /bitnami/wordpress/wp-content
+    rm -r /var/lib/apt/lists /var/cache/apt/archives 
 RUN /build/install-gosu.sh
 RUN /build/install-tini.sh
 
